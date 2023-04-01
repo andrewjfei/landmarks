@@ -13,7 +13,11 @@ struct ContentView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
-            Text("Hello World!")
+            
+            // Setting the font modifier so that the test responds correctly on the user's preferred font size
+            Text("Turtle Rock")
+                .font(.title)
+                
         }
         .padding()
     }
