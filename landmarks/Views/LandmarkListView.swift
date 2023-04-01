@@ -20,6 +20,7 @@ struct LandmarkListView: View {
                 }
             }
             .navigationTitle("Landmarks")
+            .navigationBarTitleDisplayMode(.large)
         }
     }
 }

@@ -11,13 +11,14 @@ struct LandmarkDetailView: View {
     var landmark: Landmark
     
     var body: some View {
-        VStack {
-            MapView()
+        // Scrollable view
+        ScrollView {
+            MapView(coordinate: landmark.locationCoordinate)
                 .frame(height: 300)
                 // Ignore safe area to allow MapView to extend to the top of the screen
                 .ignoresSafeArea(edges: .top)
             
-            CircleImageView(landmark: landmark)
+            CircleImageView(image: landmark.image)
                 // Offset CircleImageView in the vertical direction
                 .offset(y: -130)
                 // Apply bottom padding to CircleImageView
@@ -42,15 +43,17 @@ struct LandmarkDetailView: View {
                 
                 Divider()
                 
-                Text("About " + landmark.name)
+                // Inline text example
+                Text("About \(landmark.name)")
                     .font(.title2)
                 
                 Text(landmark.description)
             }
             .padding()
-            
-            Spacer()
         }
+        // Update the navigation title
+        .navigationTitle(landmark.name)
+        .navigationBarTitleDisplayMode(.large)
     }
 }
 

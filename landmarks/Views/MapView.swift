@@ -20,11 +20,10 @@ struct Location: Identifiable {
 }
 
 struct MapView: View {
+    var coordinate: CLLocationCoordinate2D
+    
     // The @State attribute is used to manage state, views depedning on this state will automatically update when this is updated
-    @State private var region = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: 34.111_286, longitude: -116.300_868),
-        span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
-    )
+    @State private var region = MKCoordinateRegion()
     
     let locations = [
         Location(
@@ -36,14 +35,23 @@ struct MapView: View {
     
     var body: some View {
         // The $ acts as a two way binding to a specific state (e.g. when the user iteracts with the map the region state variable will aslo update along with it)
-        Map(coordinateRegion: $region, showsUserLocation: false, annotationItems: locations) {
-            location in MapMarker(coordinate: location.coordinate)
-        }
+        Map(coordinateRegion: $region)
+            .onAppear {
+                setRegion(coordinate)
+            }
+    }
+    
+    // Function to set the region state
+    private func setRegion(_ coordinate: CLLocationCoordinate2D) {
+        region = MKCoordinateRegion(
+            center: coordinate,
+            span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
+        )
     }
 }
 
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
-        MapView()
+        MapView(coordinate: landmarks[0].locationCoordinate)
     }
 }
