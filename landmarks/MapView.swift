@@ -11,7 +11,7 @@ import MapKit
 struct MapView: View {
     // The @State attribute is used to manage state, views depedning on this state will automatically update when this is updated
     @State private var region = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: 34.011_286, longitude: -116.166_868),
+        center: CLLocationCoordinate2D(latitude: 34.111_286, longitude: -116.300_868),
         span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
     )
     
