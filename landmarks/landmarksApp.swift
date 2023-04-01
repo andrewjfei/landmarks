@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// The @main attribute identidies the application's entry point
 @main
 struct landmarksApp: App {
     var body: some Scene {
