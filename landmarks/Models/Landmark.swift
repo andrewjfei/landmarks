@@ -10,7 +10,7 @@ import SwiftUI
 import CoreLocation
 
 // Codable makes it easier to move data between the structure and the data file
-struct Landmark: Hashable, Codable {
+struct Landmark: Hashable, Codable, Identifiable {
     var id: Int
     var name: String
     var park: String
