@@ -9,15 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            
+        VStack(alignment: .leading) {
             // Setting the font modifier so that the test responds correctly on the user's preferred font size
             Text("Turtle Rock")
                 .font(.title)
+            
+            HStack {
+                Text("Joshua Tree National Park")
+                    .font(.subheadline)
                 
+                Spacer()
+                
+                Text("California")
+                    .font(.subheadline)
+            }
         }
         .padding()
     }
