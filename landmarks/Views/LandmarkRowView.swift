@@ -25,6 +25,12 @@ struct LandmarkRowView: View {
 
 struct LandmarkRowView_Previews: PreviewProvider {
     static var previews: some View {
-        LandmarkRowView(landmark: landmarks[0])
+        // A Group is a container for grouping view content
+        Group {
+            LandmarkRowView(landmark: landmarks[0])
+            LandmarkRowView(landmark: landmarks[1])
+            LandmarkRowView(landmark: landmarks[2])
+        }
+        .previewLayout(.fixed(width: 300, height: 70))
     }
 }
