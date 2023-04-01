@@ -1,5 +1,5 @@
 //
-//  CircleImage.swift
+//  CircleImageView.swift
 //  landmarks
 //
 //  Created by Andrew J Fei on 1/04/23.
