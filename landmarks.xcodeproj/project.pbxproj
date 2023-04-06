@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2630787629DF86C200045BA9 /* landmarkData.json in Resources */ = {isa = PBXBuildFile; fileRef = 2630787529DF86C200045BA9 /* landmarkData.json */; };
 		265F880329D80DE60015CBE5 /* landmarksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265F880229D80DE60015CBE5 /* landmarksApp.swift */; };
 		265F880529D80DE60015CBE5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265F880429D80DE60015CBE5 /* ContentView.swift */; };
 		265F880729D80DE60015CBE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 265F880629D80DE60015CBE5 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2630787529DF86C200045BA9 /* landmarkData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = landmarkData.json; path = ../../../../../Downloads/BuildingListsAndNavigation/Resources/landmarkData.json; sourceTree = "<group>"; };
 		265F87FF29D80DE60015CBE5 /* landmarks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = landmarks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		265F880229D80DE60015CBE5 /* landmarksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = landmarksApp.swift; sourceTree = "<group>"; };
 		265F880429D80DE60015CBE5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,9 +58,9 @@
 		265F886C29D828450015CBE5 /* LandmarkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkDetailView.swift; sourceTree = "<group>"; };
 		265F886E29D828810015CBE5 /* Landmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
 		265F887029D82AE30015CBE5 /* LandmarkData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkData.swift; sourceTree = "<group>"; };
-		265F887629D82C980015CBE5 /* landmarkData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = landmarkData.json; path = ../../../../../Downloads/BuildingListsAndNavigation/Resources/landmarkData.json; sourceTree = "<group>"; };
 		265F887729D82DF60015CBE5 /* LandmarkRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkRowView.swift; sourceTree = "<group>"; };
 		265F887929D833E90015CBE5 /* LandmarkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkListView.swift; sourceTree = "<group>"; };
+		265F887B29D845360015CBE5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		265F87F629D80DE60015CBE5 = {
 			isa = PBXGroup;
 			children = (
+				265F887B29D845360015CBE5 /* README.md */,
 				265F880129D80DE60015CBE5 /* landmarks */,
 				265F881229D80DE70015CBE5 /* landmarksTests */,
 				265F881C29D80DE70015CBE5 /* landmarksUITests */,
@@ -160,7 +163,7 @@
 		265F887329D82C750015CBE5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				265F887629D82C980015CBE5 /* landmarkData.json */,
+				2630787529DF86C200045BA9 /* landmarkData.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -168,8 +171,8 @@
 		265F887429D82C7C0015CBE5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				265F886E29D828810015CBE5 /* Landmark.swift */,
 				265F887029D82AE30015CBE5 /* LandmarkData.swift */,
+				265F886E29D828810015CBE5 /* Landmark.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			files = (
 				265F880A29D80DE60015CBE5 /* Preview Assets.xcassets in Resources */,
 				265F880729D80DE60015CBE5 /* Assets.xcassets in Resources */,
+				2630787629DF86C200045BA9 /* landmarkData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

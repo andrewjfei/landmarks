@@ -8,9 +8,17 @@
 import SwiftUI
 
 struct LandmarkListView: View {
+    @State private var showFavoritesOnly = false
+    
+    var filteredLandmarks: [Landmark] {
+        landmarks.filter { landmark in
+            (!showFavoritesOnly || landmark.isFavorite)
+        }
+    }
+    
     var body: some View {
         NavigationView {
-            List(landmarks) { landmark in
+            List(filteredLandmarks) { landmark in
                 NavigationLink {
                     // View displayed when list item is clicked on
                     LandmarkDetailView(landmark: landmark)

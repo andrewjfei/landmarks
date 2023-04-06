@@ -11,6 +11,7 @@ var landmarks: [Landmark] = load("landmarkData.json")
 
 // Load JSON data from provided file
 func load<T: Decodable>(_ filename: String) -> T {
+    print(filename)
     let data: Data
 
     guard let file = Bundle.main.url(forResource: filename, withExtension: nil)

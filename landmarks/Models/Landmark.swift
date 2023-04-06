@@ -16,6 +16,7 @@ struct Landmark: Hashable, Codable, Identifiable {
     var park: String
     var state: String
     var description: String
+    var isFavorite: Bool
     
     // This variable is private as users should not be able to access the image name, but only the image itself
     private var imageName: String
