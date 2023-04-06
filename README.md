@@ -22,7 +22,7 @@ A **strucutre** is a value type
 
 Similar to classes, structures can have properties, methods, and initialisers. The difference being that a **structure** is a value type.
 
-```swift
+```
 struct Person {
     var name: String
     var age: Int

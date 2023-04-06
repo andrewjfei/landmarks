@@ -18,13 +18,19 @@ struct LandmarkListView: View {
     
     var body: some View {
         NavigationView {
-            List(filteredLandmarks) { landmark in
-                NavigationLink {
-                    // View displayed when list item is clicked on
-                    LandmarkDetailView(landmark: landmark)
-                } label: {
-                    // Navigation list item to display
-                    LandmarkRowView(landmark: landmark)
+            List {
+                Toggle(isOn: $showFavoritesOnly) {
+                    Text("Favourites Only")
+                }
+                
+                ForEach(filteredLandmarks) { landmark in
+                    NavigationLink {
+                        // View displayed when list item is clicked on
+                        LandmarkDetailView(landmark: landmark)
+                    } label: {
+                        // Navigation list item to display
+                        LandmarkRowView(landmark: landmark)
+                    }
                 }
             }
             .navigationTitle("Landmarks")
