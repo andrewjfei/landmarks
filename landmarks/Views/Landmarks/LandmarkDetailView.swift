@@ -8,7 +8,12 @@
 import SwiftUI
 
 struct LandmarkDetailView: View {
+    @EnvironmentObject var landmarkData: LandmarkData
     var landmark: Landmark
+    
+    var landmarkIndex: Int {
+        landmarkData.landmarks.firstIndex(where: { $0.id == landmark.id })!
+    }
     
     var body: some View {
         // Scrollable view
@@ -26,9 +31,12 @@ struct LandmarkDetailView: View {
                 
             
             VStack(alignment: .leading) {
-                // Setting the font modifier so that the test responds correctly on the user's preferred font size
-                Text(landmark.name)
-                    .font(.title)
+                HStack {
+                    // Setting the font modifier so that the test responds correctly on the user's preferred font size
+                    Text(landmark.name)
+                        .font(.title)
+                    FavouriteButtonView(isSet: $landmarkData.landmarks[landmarkIndex].isFavorite)
+                }
                 
                 HStack {
                     Text(landmark.park)
@@ -58,7 +66,10 @@ struct LandmarkDetailView: View {
 }
 
 struct LandmarkDetailView_Previews: PreviewProvider {
+    static let landmarkData = LandmarkData()
+    
     static var previews: some View {
-        LandmarkDetailView(landmark: LandmarkData().landmarks[1])
+        LandmarkDetailView(landmark: landmarkData.landmarks[0])
+            .environmentObject(landmarkData)
     }
 }
