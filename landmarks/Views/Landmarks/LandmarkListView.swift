@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LandmarkListView: View {
     // The @EnvironmentObject attribute is used to inject @Published variables into any views within the same environment (i.e. subscribing to the @Published variable)
-    @EnvironmentObject var landmarkData: LandmarkData
+    @EnvironmentObject var landmarkData: ModelData
     @State private var showFavoritesOnly = false
     
     var filteredLandmarks: [Landmark] {
@@ -47,7 +47,7 @@ struct LandmarkListView_Previews: PreviewProvider {
             LandmarkListView()
                 .previewDevice(PreviewDevice(rawValue: deviceName))
                 .previewDisplayName(deviceName)
-                .environmentObject(LandmarkData())
+                .environmentObject(ModelData())
         }
     }
 }

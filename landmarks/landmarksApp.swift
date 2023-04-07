@@ -11,7 +11,7 @@ import SwiftUI
 @main
 struct landmarksApp: App {
     // The @StateObject attribute is used to initialise a model object
-    @StateObject private var landmarkData = LandmarkData()
+    @StateObject private var landmarkData = ModelData()
     
     var body: some Scene {
         WindowGroup {

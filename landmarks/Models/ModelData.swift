@@ -9,9 +9,10 @@ import Foundation
 import Combine
 
 // An ObservableObject is a custom object for data that will automatically update any views using the data when it is changed
-final class LandmarkData: ObservableObject {
+final class ModelData: ObservableObject {
     // The @Published attribute is used to publish changes made to the data so that subscribers can pick up on the change
     @Published var landmarks: [Landmark] = load("landmarkData.json")
+    var hikes: [Hike] = load("hikeData.json")
 }
 
 // Load JSON data from provided file
